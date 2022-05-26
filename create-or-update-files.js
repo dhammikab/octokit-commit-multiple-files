@@ -251,7 +251,7 @@ async function createBlob(octokit, owner, repo, contents, type) {
       await octokit.rest.git.createBlob({
         owner,
         repo,
-        content: Buffer.from(contents).toString("base64"),
+        content: contents,
         encoding: "base64"
       })
     ).data;
